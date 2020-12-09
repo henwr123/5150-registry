@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AmpSetting } from '../amp-setting';
+import { SETTINGS } from '../mock-amp-settings';
 
 @Component({
   selector: 'app-amp-settings',
@@ -8,17 +9,17 @@ import { AmpSetting } from '../amp-setting';
 })
 export class AmpSettingsComponent implements OnInit {
 
-  setting: AmpSetting = {
-    amplifier: '5150',
-    description: 'Early Van Halen brown sound',
-    title: '1976 Brown Sound'
-  };
+  settings = SETTINGS;
+
+  selectedSetting: AmpSetting;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
 
-
+  onSelect(setting: AmpSetting): void {
+    this.selectedSetting = setting;
   }
 
 }
