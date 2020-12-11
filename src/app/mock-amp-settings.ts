@@ -5,7 +5,13 @@ export const SETTINGS: AmpSetting[] = [
         id: 1,
         amplifier: '5150',
         description: 'Early Van Halen brown sound',
-        title: '1976 Brown Sound'
+        title: '1976 Brown Sound',
+        input: 1,
+        rhythmPreamp: 8,
+        rhythmPostamp: 7,
+        eqLow: 4.5,
+        eqMid: 3.5,
+        eqHigh: 1
     },
     { 
         id: 2,
