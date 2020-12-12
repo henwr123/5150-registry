@@ -1,7 +1,50 @@
-<p>amp-detail works!</p>
-<div *ngIf="setting">
-    <h2>{{setting.amplifier}}</h2>
-    <ul>
-        <li *ngIf="setting.input">{{setting.input}}</li>
-    </ul>
+
+<div id="head">
+    <div class="face crosshatch">
+        <div *ngIf="setting" class="logo">
+            {{setting.amplifier}}
+        </div>
+    </div>
+    <div id="panel" class="panel">
+        <div id="inputs" class="panel-section">
+            <div class="panel-section-top">Inputs</div>
+            <div *ngIf="setting">{{setting.input}}</div>
+        </div>
+        <div id="pre-gain-rhythmn" class="panel-section">
+            <div class="panel-section-top">Rhythym</div>
+            <div *ngIf="setting" class="panel-section-middle">{{setting.rhythmPreamp}}</div>
+            <div class="panel-section-bottom">Pre-Gain</div>
+        </div>
+        <div id="pre-gainlead" class="panel-section">
+            <div class="panel-section-top">Lead</div>
+            <div class="panel-section-middle">
+                <input *ngIf="setting" class="npknob" type="number" [(ngModel)]="setting.leadPreamp"/>
+            </div>
+            <div class="panel-section-bottom">Pre-Gain</div>
+        </div>
+        <div id="equalizer" class="panel-section">
+            <div class="panel-section-top">Equalization</div>
+            <span *ngIf="setting">{{setting.eqLow}}</span>
+            <span *ngIf="setting">{{setting.eqMid}}</span>
+            <span *ngIf="setting">{{setting.eqHigh}}</span>
+        </div>
+        <div id="post-gain-rhythmn" class="panel-section">
+            <div class="panel-section-top">Rythmn</div>
+            <div *ngIf="setting" class="panel-section-middle">{{setting.rhythmPostamp}}</div>
+            <div class="panel-section-bottom">Post-Gain</div>
+        </div>
+        <div id="post-gain-lead" class="panel-section">
+            <div class="panel-section-top">Lead</div>
+            <div *ngIf="setting"  class="panel-section-middle">{{setting.leadPostamp}}</div>
+            <div class="panel-section-bottom">Post-Gain</div>
+        </div>
+        <div id="power-amp" class="panel-section">
+            <div>Power Amp</div>
+            <div *ngIf="setting">{{setting.resonance}}</div>
+            <div *ngIf="setting">{{setting.presence}}</div>
+        </div>
+        <div id="indicator" class="panel-section">
+            <div>EVH</div>
+        </div>
+    </div>
 </div>

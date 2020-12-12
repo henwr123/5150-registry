@@ -11,7 +11,9 @@ export const SETTINGS: AmpSetting[] = [
         rhythmPostamp: 7,
         eqLow: 4.5,
         eqMid: 3.5,
-        eqHigh: 1
+        eqHigh: 1,
+        leadPreamp: 5.5,
+        leadPostamp: 10
     },
     { 
         id: 2,
