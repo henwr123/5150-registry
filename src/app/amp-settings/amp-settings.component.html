@@ -1,0 +1,33 @@
+<h2>Amp Settings</h2>
+
+<app-amp-detail [setting]="selectedSetting"></app-amp-detail>
+
+<table id="settings-table" class="settings">
+    <thead>
+        <tr>
+            <th>Amplifier</th>
+            <th>Title</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let setting of settings" (click)="onSelect(setting)" [class.selected]="setting === selectedSetting">
+            <td>{{setting.amplifier}}</td>
+            <td>{{setting.title}}</td>
+            <td>{{setting.description}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!--
+<div *ngIf="selectedSetting">
+
+    <h2>{{selectedSetting.title | uppercase}}</h2>
+    <div><span>id: </span>{{selectedSetting.id}}</div>
+    <div>
+        <label>Amplifier: 
+            <input [(ngModel)]="selectedSetting.amplifier" placeholder="5150"/>
+        </label>
+    </div>
+</div>
+-->
